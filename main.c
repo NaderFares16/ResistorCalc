@@ -5,10 +5,19 @@ int main() {
   printf("Developed by: Nader Fares\n\n");
 
   // Váriaveis Principais
-  float voltage = 0; // (Volts)
-  float current = 0; // (Amper)
-  float resistance = 0; // (Ohm)
+  float voltage; // (Volts)
+  float current; // (Amper)
 
-  system("PAUSE");
+  printf("Enter the circuit voltage in volts: ");
+  scanf("%f", &voltage);
+
+  printf("\nEnter the circuit current in ampers: ");
+  scanf("%f", &current);
+
+  // Lei de Ohm: R = V / I
+  float resistance = voltage / current;
+
+  printf("\nThe resistance value is: %.2f Ohms", resistance);
+
   return 0;
 }
